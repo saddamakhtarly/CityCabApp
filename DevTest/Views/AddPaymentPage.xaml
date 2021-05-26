@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:renderers="clr-namespace:DevTest.Renderers"
+             Title="Add Payment"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.AddPaymentPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,auto,auto"
+            RowSpacing="0">
+            <Frame Grid.Row="0" Padding="0" WidthRequest="350" HeightRequest="250" BackgroundColor="Transparent" Margin="15">
+                <Image  Source="pakistan" Aspect="AspectFill" BackgroundColor="Transparent" />
+            </Frame>
+
+            <Frame Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" Margin="15">
+                <Grid RowDefinitions="auto,*,auto" RowSpacing="0">
+                    <Label Grid.Row="0" Margin="10,0"  Text="CREDIT CARD NUMBER"  />
+                    <renderers:BorderlessEntry Grid.Row="1" Margin="10,0"  FontSize="18" Keyboard="Numeric"/>
+                </Grid>
+            </Frame>
+            <Button Grid.Row="2" Margin="15" CornerRadius="5" Text="NEXT" TextColor="{StaticResource WhiteColor}" FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Verify Mobile"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.VerifyMobilePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              RowDefinitions="auto,30,auto,0,auto,20,auto">
+            <Label Margin="10,50" Grid.Row="0" TextColor="{StaticResource GrayColor}" HorizontalTextAlignment="Center" FontSize="16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#xf3cd;&#x0a;" FontSize="66" FontFamily="fwFreeS" TextColor="{StaticResource DarkOrangeColor}"  />
+                        <Span Text="&#x0a;We are unable to auto -verify your mobile number." />
+                        <Span Text="&#x0a;please enter the code tested to +1 91234 56979" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Grid.Row="2" Text="ENTER OTP" Margin="10,0" VerticalTextAlignment="End"/>
+            <!--Row 5  50-->
+            <Entry Grid.Row="4" Margin="10,0" FontSize="24" />
+            <Button Grid.Row="6"  Text="SUBMIT" TextColor="{StaticResource WhiteColor}" Margin="10,0"  FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+
+
+
+
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

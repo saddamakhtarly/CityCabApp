@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login"
+    NavigationPage.HasBackButton="True"
+    x:Class="DevTest.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              RowDefinitions="120, 20,20,10,40,50,10,40,50,20,70,20,20">
+            <!--Row 0   120-->
+            <Grid Margin="10,20" >
+                <Button Text="&#xf0d5;" FontFamily="fwFreeB" FontSize="44" BackgroundColor="Transparent" TextColor="{StaticResource RedColor}" BorderWidth="1" BorderColor="{StaticResource RedColor}"  Grid.Column="0"/>
+                <Button Text="&#xf39e;" FontFamily="fwFreeB" FontSize="44" BackgroundColor="Transparent" TextColor="{StaticResource BlueColor}" BorderWidth="1" BorderColor="{StaticResource BlueColor}"  Grid.Column="1"/>
+            </Grid>
+            <!--Row 1  20-->
+            <!--Row 2  20-->
+            <Label Grid.Row="2" Text="OR" HorizontalOptions="Center"/>
+            <!--Row 3  10-->
+            <!--Row 4  40-->
+            <Label Grid.Row="4" Text="PHONE NUMBER OR EMAIL" Margin="10,0" VerticalTextAlignment="End"/>
+            <!--Row 5  50-->
+            <Entry Grid.Row="5" Placeholder="987654321" PlaceholderColor="{StaticResource BlackColor}" Margin="10,0" FontSize="24" Keyboard="Numeric"/>
+            <!--Row 6  10-->
+            <!--Row 7  40-->
+            <Label Grid.Row="7" Text="PASSWORD" Margin="10,0" VerticalTextAlignment="End"/>
+            <!--Row 8  50-->
+            <Entry Grid.Row="8" Placeholder="987654321" PlaceholderColor="{StaticResource BlackColor}" Margin="10,0" FontSize="24" Keyboard="Numeric"/>
+            <!--Row 9  20-->
+            <!--Row 10  70-->
+            <Button Grid.Row="10" CornerRadius="5" Text="LOGIN" TextColor="{StaticResource WhiteColor}" Margin="10,0"  FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+            <!--Row 11  20-->
+            <!--Row 12  20-->
+            <Label Grid.Row="12" Text="FORGOT PASSWORD?" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+ 

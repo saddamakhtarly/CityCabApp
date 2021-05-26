@@ -1,0 +1,109 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\fwFreeB.otf" />
+    <None Remove="Assets\Fonts\fwFreeR.otf" />
+    <None Remove="Assets\Fonts\fwFreeS.otf" />
+    <None Remove="Assets\Fonts\fwProB.ttf" />
+    <None Remove="Assets\Fonts\fwProL.ttf" />
+    <None Remove="Assets\Fonts\fwProR.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Black.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Bold.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Italic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Light.ttf" />
+    <None Remove="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Medium.ttf" />
+    <None Remove="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Thin.ttf" />
+    <None Remove="Assets\Fonts\Roboto-ThinItalic.ttf" />
+    <None Remove="Assets\Fonts\SofiaProBold.otf" />
+    <None Remove="Assets\Fonts\SofiaProExtraLight.otf" />
+    <None Remove="Assets\Fonts\SofiaProLight.otf" />
+    <None Remove="Assets\Fonts\SofiaProMedium.otf" />
+    <None Remove="Assets\Fonts\SofiaProRegular.otf" />
+    <None Remove="Assets\Fonts\SofiaProSemiBold.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\fwFreeB.otf" />
+    <EmbeddedResource Include="Assets\Fonts\fwFreeR.otf" />
+    <EmbeddedResource Include="Assets\Fonts\fwFreeS.otf" />
+    <EmbeddedResource Include="Assets\Fonts\fwProB.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\fwProL.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\fwProR.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Black.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Light.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Thin.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-ThinItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProBold.otf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProExtraLight.otf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProLight.otf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProMedium.otf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProRegular.otf" />
+    <EmbeddedResource Include="Assets\Fonts\SofiaProSemiBold.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Assets\AppStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\AppStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Colors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AddPaymentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PaymentTypePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UpdatePhoneNumberPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VerifyMobilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

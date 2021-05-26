@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Register"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.RegisterPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              RowDefinitions="120,20,20,10,80,30,20,10,40,10,80,30,20,10,40,40,50">
+            <!--Row 0   120-->
+            <Grid Margin="10,20" >
+                <Button Text="&#xf0d5;" CornerRadius="5" FontFamily="fwFreeB" FontSize="Medium" BackgroundColor="{StaticResource RedColor}" TextColor="{StaticResource WhiteColor}" BorderWidth="1" BorderColor="{StaticResource RedColor}"  Grid.Column="0"/>
+                <Button Text="&#xf39e;" CornerRadius="5" FontFamily="fwFreeB" FontSize="Medium" BackgroundColor="{StaticResource BlueColor}" TextColor="{StaticResource WhiteColor}" BorderWidth="1" BorderColor="{StaticResource BlueColor}"  Grid.Column="1"/>
+            </Grid>
+            <!--Row 1  20-->
+            <!--Row 2  20-->
+            <Label Grid.Row="2" Text="OR" HorizontalOptions="Center"/>
+            <!--Row 3  10-->
+            <!--Row 4  80-->
+            <Grid Grid.Row="4" Margin="10,0" RowSpacing="0" ColumnSpacing="30" Padding="0" HorizontalOptions="FillAndExpand" >
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="*"  />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="FIRST NAME" Grid.Column="0" VerticalTextAlignment="End"  />
+                <Label Text="LAST NAME"  Grid.Column="1" VerticalTextAlignment="End"  />
+                <Entry Grid.Row="1" Grid.Column="0"  FontSize="18" Placeholder="jhon" />
+                <Entry Grid.Row="1" Grid.Column="1"  FontSize="18" Placeholder="Smith" />
+            </Grid>
+            <!--Row 5  30-->
+            <!--Row 6  20-->
+            <Label Grid.Row="6" Margin="10,0"  Text="EMAIL"  />
+            <!--Row 7  10-->
+            <!--Row 8  40-->
+            <Entry Grid.Row="8" Margin="10,0"  FontSize="18" Keyboard="Email" Placeholder="jhon@domain.com" />
+            <!--Row 9  10-->
+            <!--Row 10  80-->
+            <Grid Grid.Row="10" Margin="10,0" RowSpacing="0" ColumnSpacing="30" Padding="0" HorizontalOptions="FillAndExpand"
+                  RowDefinitions="auto, auto">
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="auto"  />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="MOBILE" Grid.Column="0" VerticalTextAlignment="End" WidthRequest="100" />
+                    <Grid Grid.Row="1" Grid.Column="0"
+                    ColumnDefinitions="auto, *, auto"
+                    ColumnSpacing="0">
+                        
+                    <Image Source="pakistan" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" WidthRequest="25" HeightRequest="25"/>
+                    <Entry
+                        Grid.Column="1"
+                        Keyboard="Telephone"
+                         />
+
+                        <Label
+                        Grid.Column="2"
+                        FontFamily="fwFreeS"
+                            FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="End"
+                        Text="&#xf0dd;" />
+                    </Grid>
+                
+                <Entry Grid.Row="1" Grid.Column="1"  FontSize="18" Keyboard="Telephone" />
+            </Grid>
+
+            <!--Row 11  30-->
+            <!--Row 12  20-->
+            <Label Grid.Row="12" Margin="10,0"  Text="PASSWORD"  />
+            <!--Row 13  10-->
+            <!--Row 14  40-->
+            <Entry Grid.Row="14" Margin="10,0"  FontSize="18" IsPassword="True"/>
+            <!--Row 15  40-->
+            <!--Row 16  70-->
+            <Button Grid.Row="16" CornerRadius="5" Command="{Binding VerifyMobile}" Text="NEXT" TextColor="{StaticResource WhiteColor}" Margin="10,0"  FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

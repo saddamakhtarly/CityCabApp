@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Update phone number"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.UpdatePhoneNumberPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              RowDefinitions="auto,30,auto,auto,20,auto">
+            <Label Margin="10,50" Grid.Row="0" TextColor="{StaticResource GrayColor}" HorizontalTextAlignment="Center" FontSize="16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#xf3cd;&#x0a;" FontSize="66" FontFamily="fwFreeS" TextColor="{StaticResource DarkOrangeColor}"  />
+                        <Span Text="&#x0a;We use your email &amp; mobile number to send you" />
+                        <Span Text="&#x0a;ride confirmations &amp; receipts" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <Grid Grid.Row="2" Margin="10,0" RowSpacing="0" ColumnSpacing="30" Padding="0" HorizontalOptions="FillAndExpand"
+                  RowDefinitions="auto, auto">
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="auto"  />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="MOBILE" Grid.Column="0" VerticalTextAlignment="End" WidthRequest="100" />
+                <Grid Grid.Row="1" Grid.Column="0"
+                    ColumnDefinitions="auto, *, auto"
+                    ColumnSpacing="0">
+
+                    <Image Source="pakistan" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" WidthRequest="25" HeightRequest="25"/>
+                    <Entry
+                        Grid.Column="1"
+                        Keyboard="Telephone"
+                         />
+
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="fwFreeS"
+                        FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="End"
+                        Text="&#xf0dd;" />
+                </Grid>
+
+                <Entry Grid.Row="1" Grid.Column="1"  FontSize="18" Keyboard="Telephone" />
+            </Grid>
+            <!--Row 5  50-->
+            <Button Grid.Row="3"  Text="SAVE AND VERIGY" TextColor="{StaticResource WhiteColor}" Margin="10,20"  FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+
+
+
+
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

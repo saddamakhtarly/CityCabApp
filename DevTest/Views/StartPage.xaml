@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            NavigationPage.HasNavigationBar="False"
+             xmlns:appString="clr-namespace:DevTest.Assets"
+             x:Class="DevTest.Views.StartPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              RowDefinitions="*, auto">
+
+            <BoxView Grid.Row="0"  BackgroundColor="{StaticResource LightGrayColor}"/>
+            <Frame Grid.Row="1">
+                <StackLayout>
+                    <Label TextColor="{StaticResource OrangeColor}" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,30,0,10" Text="{x:Static appString:AppStrings.Welcome} "/>
+                    <Label TextColor="{StaticResource LightGrayColor}" HorizontalTextAlignment="Center" FontSize="16">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Lorem ipsum dolor sit amet, consectetur" />
+                                <Span Text="&#x0a;adipisicing elit, sed do eiusmod tempor incididunt" />
+                                <Span Text="&#x0a;ut labore et dolore magna aliqua." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Grid Margin="0,40,0,25">
+                        <Button Text="LOGIN" Command="{Binding LoginCommand}" CornerRadius="5" Padding="25,25,25,25" Grid.Column="0" BorderWidth="1"  FontSize="18" BackgroundColor="Transparent" BorderColor="{StaticResource BlackColor}" />
+                        <Button Text="REGISTER" Command="{Binding RegisterCommand}" CornerRadius="5" Grid.Column="1" TextColor="{StaticResource WhiteColor}"  FontSize="18" BackgroundColor="{StaticResource DarkGrayColor}"/>
+                    </Grid>
+
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
