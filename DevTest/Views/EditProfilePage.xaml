@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:renderers="clr-namespace:DevTest.Renderers"
+             x:Class="DevTest.Views.EditProfilePage">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto"
+            RowSpacing="0">
+            <Frame Grid.Row="0" Padding="0" WidthRequest="350" HeightRequest="250" Margin="10">
+                <Grid>
+                    <Image  Source="background"  Aspect="AspectFill"  />
+                    <Frame Padding="0" Margin="0" CornerRadius="100" HeightRequest="100"  WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image  Source="pakistan"  Aspect="AspectFill"  />
+                    </Frame>
+                </Grid>
+            </Frame>
+            <Grid Grid.Row="1" Margin="10,0" RowSpacing="0" ColumnSpacing="30" Padding="0" HorizontalOptions="FillAndExpand" >
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="*"  />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="FIRST NAME" Grid.Column="0" VerticalTextAlignment="End"  />
+                <Label Text="LAST NAME"  Grid.Column="1" VerticalTextAlignment="End"  />
+                <Entry Grid.Row="1" Grid.Column="0"  FontSize="18" Placeholder="jhon" />
+                <Entry Grid.Row="1" Grid.Column="1"  FontSize="18" Placeholder="Smith" />
+            </Grid>
+            <Label Grid.Row="2" Margin="10,0"  Text="EMAIL"  />
+            <Entry Grid.Row="3" Margin="10,0"  FontSize="18" Keyboard="Email" Placeholder="jhon@domain.com" />
+            <Grid Grid.Row="4" Margin="10,0" RowSpacing="0" ColumnSpacing="30" Padding="0" HorizontalOptions="FillAndExpand"
+                  RowDefinitions="auto, auto">
+                <Grid.ColumnDefinitions  >
+                    <ColumnDefinition Width="auto"  />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="MOBILE" Grid.Column="0" VerticalTextAlignment="End" WidthRequest="100" />
+                <Grid Grid.Row="1" Grid.Column="0"
+                    ColumnDefinitions="auto, *, auto"
+                    ColumnSpacing="0">
+
+                    <Image Source="pakistan" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" WidthRequest="25" HeightRequest="25"/>
+                    <Entry
+                        Grid.Column="1"
+                        Keyboard="Telephone"
+                         />
+
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="fwFreeS"
+                            FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="End"
+                        Text="&#xf0dd;" />
+                </Grid>
+
+                <Entry Grid.Row="1" Grid.Column="1"  FontSize="18" Keyboard="Telephone" />
+            </Grid>
+            <Entry Grid.Row="5" Placeholder="PLACE" Margin="10,0"/>
+            <StackLayout Grid.Row="6">
+                <Grid 
+                    ColumnDefinitions="50, *, 50"
+                    ColumnSpacing="0">
+
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="fwFreeS"
+                        FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="&#xf015;" />
+                    <StackLayout Grid.Column="1" Margin="0" Padding="0"                       >
+                        <Label Text="148 Vallie Row" FontSize="22" Margin="0" Padding="0" />
+                        <Label Text="Add Home" FontSize="18" Margin="0" Padding="0"/>
+                        
+                    </StackLayout>
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="fwFreeS"
+                            FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="&#xf304;" />
+                </Grid>
+                <Grid 
+                    ColumnDefinitions="50, *, 50"
+                    ColumnSpacing="0">
+
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="fwFreeS"
+                        FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="&#xf290;" />
+                    <StackLayout Grid.Column="1" Margin="0" Padding="0"                       >
+                        <Label Text="148 Vallie Row" FontSize="22" Margin="0" Padding="0" />
+                        <Label Text="Add Home" FontSize="18" Margin="0" Padding="0"/>
+
+                    </StackLayout>
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="fwFreeS"
+                            FontSize="22"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="&#xf304;" />
+                </Grid>
+            </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
