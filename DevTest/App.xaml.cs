@@ -17,7 +17,7 @@ namespace DevTest
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(EditProfilePage)}");
+            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(StartPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
