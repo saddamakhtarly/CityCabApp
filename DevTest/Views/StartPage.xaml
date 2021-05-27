@@ -5,6 +5,7 @@
              xmlns:appString="clr-namespace:DevTest.Assets"
              x:Class="DevTest.Views.StartPage">
     <ContentPage.Content>
+        <ScrollView>
         <Grid RowSpacing="0"
               RowDefinitions="*, auto">
 
@@ -30,5 +31,6 @@
 
             </Frame>
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

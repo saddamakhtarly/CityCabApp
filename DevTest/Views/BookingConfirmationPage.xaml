@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Booking Confirmation"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.BookingConfirmationPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid RowDefinitions="auto,*"
+            RowSpacing="0">
+            <!--Row 0   auto-->
+            <Grid Grid.Row="0"
+                    RowDefinitions="auto,auto"
+                    RowSpacing="0" BackgroundColor="{StaticResource OrangeColor}">
+
+
+                <Label
+                        Grid.Row="0"
+                        Margin="0,22"
+                        FontSize="122"
+                        FontFamily="fwFreeS"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Text="&#xf5e4;" />
+                <Label
+                        Grid.Row="1"
+                    Margin="0,10"
+                        FontSize="20"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Text="REQUEST ONGOING" />
+
+
+
+            </Grid>
+            <!--Row 1   *-->
+
+            <Frame BackgroundColor="{StaticResource AliceBlueColor}" Grid.Row="1"  >
+                <Grid  RowDefinitions="auto,*,auto"
+                    RowSpacing="0" >
+                    <Frame Grid.Row="0" Margin="5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                        <Grid ColumnDefinitions="auto,*">
+                                <Image Source="bookingconfirmation" Grid.Column="0" Grid.RowSpan="2" WidthRequest="35" HeightRequest="70" BackgroundColor="Transparent"/>
+                            <Label Text="243 Joanie Pine" Padding="10" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="18"/>
+                            <Label Text="8753 Mauricio Walks" Padding="10" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="18"/>
+                            </Grid>
+                    </Frame>
+                    
+                    <Button Grid.Row="2" CornerRadius="5" Padding="0" Text="CANCEL REQUEST" TextColor="{StaticResource WhiteColor}" FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+                </Grid>
+            </Frame>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

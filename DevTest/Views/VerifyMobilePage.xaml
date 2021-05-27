@@ -5,6 +5,7 @@
              NavigationPage.HasBackButton="True"
              x:Class="DevTest.Views.VerifyMobilePage">
     <ContentPage.Content>
+        <ScrollView>
         <Grid RowSpacing="0"
               RowDefinitions="auto,30,auto,0,auto,20,auto">
             <Label Margin="10,50" Grid.Row="0" TextColor="{StaticResource GrayColor}" HorizontalTextAlignment="Center" FontSize="16">
@@ -31,5 +32,6 @@
 
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

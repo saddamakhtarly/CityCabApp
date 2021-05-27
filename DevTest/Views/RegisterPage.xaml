@@ -5,6 +5,7 @@
              NavigationPage.HasBackButton="True"
              x:Class="DevTest.Views.RegisterPage">
     <ContentPage.Content>
+        <ScrollView>
         <Grid RowSpacing="0"
               RowDefinitions="120,20,20,10,80,30,20,10,40,10,80,30,20,10,40,40,50">
             <!--Row 0   120-->
@@ -79,5 +80,6 @@
 
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

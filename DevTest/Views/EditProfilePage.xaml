@@ -11,8 +11,8 @@
             <Frame Grid.Row="0" Padding="0" WidthRequest="350" HeightRequest="250" Margin="10">
                 <Grid>
                     <Image  Source="background"  Aspect="AspectFill"  />
-                    <Frame Padding="0" Margin="0" CornerRadius="100" HeightRequest="100"  WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Image  Source="pakistan"  Aspect="AspectFill"  />
+                    <Frame Padding="0" Margin="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="100"  WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image  Source="pakistan"  Aspect="AspectFit"  />
                     </Frame>
                 </Grid>
             </Frame>

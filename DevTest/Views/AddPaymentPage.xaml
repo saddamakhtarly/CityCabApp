@@ -6,6 +6,7 @@
              NavigationPage.HasBackButton="True"
              x:Class="DevTest.Views.AddPaymentPage">
     <ContentPage.Content>
+        <ScrollView>
         <Grid RowDefinitions="auto,auto,auto"
             RowSpacing="0">
             <Frame Grid.Row="0" Padding="0" WidthRequest="350" HeightRequest="250" BackgroundColor="Transparent" Margin="15">
@@ -31,5 +32,6 @@
 
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

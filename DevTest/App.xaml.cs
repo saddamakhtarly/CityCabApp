@@ -17,7 +17,7 @@ namespace DevTest
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(StartPage)}");
+            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(FareEstimatePage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -32,6 +32,9 @@ namespace DevTest
             containerRegistry.RegisterForNavigation<AddPaymentPage, AddPaymentPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdatePhoneNumberPage, UpdatePhoneNumberPageViewModel>();
             containerRegistry.RegisterForNavigation<EditProfilePage, EditProfilePageViewModel>();
+            containerRegistry.RegisterForNavigation<ChangePaymentModePage, ChangePaymentModePageViewModel>();
+            containerRegistry.RegisterForNavigation<BookingConfirmationPage, BookingConfirmationPageViewModel>();
+            containerRegistry.RegisterForNavigation<FareEstimatePage, FareEstimatePageViewModel>();
 
 
 
