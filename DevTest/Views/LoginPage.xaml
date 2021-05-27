@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <ScrollView>
         <Grid RowSpacing="0"
-              RowDefinitions="120, 20,20,10,40,50,10,40,50,20,70,20,20">
+              RowDefinitions="120, 20,40,10,40,50,10,40,50,20,70,20,20">
             <!--Row 0   120-->
             <Grid Margin="10,20" >
                 <Button Text="&#xf0d5;" FontFamily="fwFreeB" FontSize="44" BackgroundColor="Transparent" TextColor="{StaticResource RedColor}" BorderWidth="1" BorderColor="{StaticResource RedColor}"  Grid.Column="0"/>
@@ -16,8 +16,21 @@
             </Grid>
             <!--Row 1  20-->
             <!--Row 2  20-->
-            <Label Grid.Row="2" Text="OR" HorizontalOptions="Center"/>
-            <!--Row 3  10-->
+
+                <Grid Grid.Row="2"
+                      Margin="40,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView HeightRequest="1" VerticalOptions="Center" Grid.Column="0" Color="Gray" />
+                    <Frame Grid.Column="1" CornerRadius="0" HasShadow="False" IsClippedToBounds="True" WidthRequest="40" HeightRequest="40" BorderColor="Gray"  Padding="0"  Rotation="-45" >
+                        <Label  Text="OR" HorizontalOptions="Center" Rotation="45" VerticalOptions="Center" Padding="1" />
+                    </Frame>
+                    <BoxView HeightRequest="1" VerticalOptions="Center" Grid.Column="2" Color="Gray"  />
+                </Grid>
+                <!--Row 3  10-->
             <!--Row 4  40-->
             <Label Grid.Row="4" Text="PHONE NUMBER OR EMAIL" Margin="10,0" VerticalTextAlignment="End"/>
             <!--Row 5  50-->

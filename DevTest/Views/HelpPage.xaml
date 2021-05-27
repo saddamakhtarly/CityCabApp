@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Help"
+             
+    NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.HelpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="10" FontSize="16" Text="Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design, In publishing and graphic design,  "
+                 />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

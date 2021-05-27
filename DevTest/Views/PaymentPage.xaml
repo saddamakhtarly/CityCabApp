@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevTest.Views.PaymentPage">
+    <NavigationPage.TitleView>
+        <Grid ColumnDefinitions="auto,*,auto" ColumnSpacing="0" >
+            <Label Grid.Column="0" Text="&#xf060;" TextColor="White" FontFamily="fwFreeS" FontSize="24" Margin="10" VerticalTextAlignment="Center"/>
+            <Label Grid.Column="1" Text="Payment" TextColor="White" FontSize="24" VerticalTextAlignment="Center" Margin="10"/>
+            <Label Grid.Column="2" Text="$ 50.13" TextColor="White" FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" Margin="10"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <Grid RowDefinitions="auto,50,*"
+            RowSpacing="0">
+                <!--Row 0   auto-->
+                <Label Grid.Row="0" Text="ENTER PROMO CODE HERE" Margin="15,50,15,0" />
+                <!--Row 1   50-->
+                <Grid Grid.Row="1"
+                    ColumnDefinitions="*"
+                    ColumnSpacing="0">
+                    <Entry
+                        Grid.Column="0"
+                        Margin="15,0"
+                        FontFamily="sProR"
+                        FontSize="16"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
+
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="fwFreeS"
+                        FontSize="15"
+                        Margin="0,0,25,0"
+                        InputTransparent="True"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="End"
+                        Text="DONE" />
+                </Grid>
+                <!--Row 2   auto-->
+                <Frame BackgroundColor="{StaticResource AliceBlueColor}" Grid.Row="2" Margin="5,20,5,0" >
+                    <Grid  RowDefinitions="auto,auto,auto,auto,120,AUTO"
+                    RowSpacing="5" >
+                        <Label Grid.Row="0" Text="SELECT PAYMENT MODE" Margin="0,5" />
+                        <Frame Grid.Row="1" Margin="5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                            <Grid ColumnDefinitions="auto,*,auto">
+                                <Image Source="Paypal" Grid.Column="0" WidthRequest="55" HeightRequest="55" BackgroundColor="Transparent"/>
+                                <Label Text="Paypal" Padding="10" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="25"/>
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Row="2" Margin="5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                            <Grid ColumnDefinitions="auto,*,auto">
+                                <Image Source="CreditCard" Grid.Column="0" WidthRequest="55" HeightRequest="55" BackgroundColor="Transparent"/>
+                                <Label Text="Credit/Debit" Padding="10" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="25"/>
+                                <Label
+                                Grid.Column="2"
+                                FontFamily="fwFreeS"
+                                        FontSize="33"
+                                InputTransparent="True"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                Text="&#xf111;" />
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Row="3" Margin="5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                            <Grid ColumnDefinitions="auto,*,auto">
+                                <Image Source="cash123" Grid.Column="0" WidthRequest="55" HeightRequest="55" BackgroundColor="Transparent"/>
+                                <Label Text="Cash" Padding="10" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="25"/>
+
+
+
+                            </Grid>
+                        </Frame>
+                        <Button Grid.Row="5" CornerRadius="5" Text="DONE" TextColor="{StaticResource WhiteColor}" FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+
+                    </Grid>
+
+                </Frame>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

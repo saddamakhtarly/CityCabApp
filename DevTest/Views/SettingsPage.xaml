@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Settings"
+    
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Change password"
+                FontSize="24"
+                HorizontalOptions="StartAndExpand" Margin="20,10" />
+            <BoxView Margin="20,0" HeightRequest="1" VerticalOptions="Center" Grid.Column="0" Color="Gray" />
+            <Label Text="Emergency Contacts"
+                FontSize="24"
+                HorizontalOptions="StartAndExpand" Margin="20,10" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
