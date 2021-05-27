@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Emergency Contacts"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.EmergencyContactsPage">
+    <ContentPage.Content>
+
+                <Grid  RowDefinitions="auto,auto,auto,*,auto"
+                    RowSpacing="0" BackgroundColor="White">
+            <Image Grid.Row="0" Margin="0,120,0,0" Source="ContactLogo" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Margin="20" Grid.Row="1" Text="Let's make travel safer" FontSize="24" HorizontalOptions="Center" TextColor="{StaticResource OrangeColor}"/>
+            <Label Margin="20,0" Grid.Row="2" TextColor="{StaticResource GrayColor}" HorizontalTextAlignment="Center" FontSize="18">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Easily let your friends and family follow" />
+                        <Span Text="&#x0a;your trip progress and see that you've arrived" />
+                        <Span Text="&#x0a;safely at your destination" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Grid.Row="4" CornerRadius="5"  Text="ADD CONTACTS" TextColor="{StaticResource WhiteColor}" Margin="10"  FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />
+        </Grid>
+
+        
+    </ContentPage.Content>
+</ContentPage>
