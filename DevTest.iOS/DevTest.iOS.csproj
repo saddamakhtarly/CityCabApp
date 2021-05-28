@@ -177,4 +177,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\ContactLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\map.png" />
+  </ItemGroup>
 </Project>

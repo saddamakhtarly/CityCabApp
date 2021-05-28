@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Review your trip"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.ReviewYourTripPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="auto,*"
+            RowSpacing="0">
+                <!--Row 0   auto-->
+                <Grid Grid.Row="0"
+                    RowDefinitions="auto,auto,auto"
+                    RowSpacing="0" BackgroundColor="{StaticResource OrangeColor}">
+
+                    <Label
+                        Grid.Row="0"
+                        FontSize="36"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Text="$10" />
+                    <Label
+                        Grid.Row="1"
+                        Margin="0,5"
+                        FontSize="102"
+                        FontFamily="fwFreeS"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Text="&#xf5e4;" />
+                    <Label
+                        Grid.Row="2"
+                        Margin="0,0,0,10"
+                        FontSize="20"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Text="NOVEMBER 15,2016 AT 4.00 PM" />
+
+
+
+                </Grid>
+                <!--Row 1   *-->
+
+                <Frame BackgroundColor="{StaticResource AliceBlueColor}" Grid.Row="1"  >
+                    <Grid  RowDefinitions="auto,auto,*,auto"
+                    RowSpacing="0" >
+                        <Frame Grid.Row="0" Margin="5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                            <Grid ColumnDefinitions="auto,*">
+                                <Image Source="bookingconfirmation" Grid.Column="0" Grid.RowSpan="2" WidthRequest="35" HeightRequest="70" BackgroundColor="Transparent"/>
+                                <Label Text="243 Joanie Pine" Padding="10" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="18"/>
+                                <Label Text="8753 Mauricio Walks" Padding="10" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="18"/>
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Row="1" Margin="5,15,5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
+                            <Grid RowDefinitions="auto,auto,auto">
+                                <Grid Grid.Row="0" ColumnDefinitions="*,auto,auto,auto,auto,auto,*">
+                                    <Label Grid.Column="1" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
+                                        <Label.Triggers>
+                                            <DataTrigger Binding="{Binding IsClicked}" TargetType="Label" Value="True">
+                                                <Setter Property="TextColor" Value="Orange"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Grid.Column="2" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
+                                        <Label.Triggers>
+                                            <DataTrigger Binding="{Binding IsClicked}" TargetType="Label" Value="True">
+                                                <Setter Property="TextColor" Value="Orange"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Grid.Column="3" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
+                                        <Label.Triggers>
+                                            <DataTrigger Binding="{Binding IsClicked}" TargetType="Label" Value="True">
+                                                <Setter Property="TextColor" Value="Orange"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Grid.Column="4" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
+                                        <Label.Triggers>
+                                            <DataTrigger Binding="{Binding IsClicked}" TargetType="Label" Value="True">
+                                                <Setter Property="TextColor" Value="Orange"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Grid.Column="5" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
+                                        <Label.Triggers>
+                                            <DataTrigger Binding="{Binding IsClicked}" TargetType="Label" Value="True">
+                                                <Setter Property="TextColor" Value="Orange"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                                <Label Margin="0,40,0,0" Grid.Row="1" TextColor="LightGray" Text="WRITE YOUR COMMENT" FontSize="18"/>
+                                <Entry Grid.Row="2" Placeholder="Lorem ipsum dolor sit"/>
+                            </Grid>
+                        </Frame>
+                        <!--<Button Grid.Row="2" CornerRadius="5" Padding="0" Text="CANCEL REQUEST" TextColor="{StaticResource WhiteColor}" FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />-->
+                        <Grid  Grid.Row="3" Margin="5">
+                            <Button Text="NEED HELP?"  CornerRadius="5" Padding="25,25,25,25" Grid.Column="0" BorderWidth="1"  FontSize="18" BackgroundColor="Transparent" BorderColor="{StaticResource BlackColor}" />
+                            <Button Text="RATE NOW"  CornerRadius="5" Grid.Column="1" TextColor="{StaticResource WhiteColor}"  FontSize="18" BackgroundColor="{StaticResource DarkGrayColor}"/>
+                        </Grid>
+
+
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

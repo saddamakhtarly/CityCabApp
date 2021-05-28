@@ -17,7 +17,7 @@ namespace DevTest
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(EmergencyContactsPage)}");
+            NavigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(StartPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -40,6 +40,9 @@ namespace DevTest
             containerRegistry.RegisterForNavigation<PaymentPage, PaymentPageViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
             containerRegistry.RegisterForNavigation<EmergencyContactsPage, EmergencyContactsPageViewModel>();
+            containerRegistry.RegisterForNavigation<EmergencyContactsListPage, EmergencyContactsListPageViewModel>();
+            containerRegistry.RegisterForNavigation<ReviewYourTripPage, ReviewYourTripPageViewModel>();
+            containerRegistry.RegisterForNavigation<HistoryPage, HistoryPageViewModel>();
 
 
 

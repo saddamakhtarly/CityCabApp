@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="History"
+             NavigationPage.HasBackButton="True"
+             x:Class="DevTest.Views.HistoryPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid RowDefinitions="auto,auto" RowSpacing="0" >
+                <Frame Grid.Row="0" Margin="10,10,10,0"  HeightRequest="130" HasShadow="False" Padding="0" IsClippedToBounds="True">
+                    <Image  Source="map" Aspect="AspectFill" />
+                </Frame>
+                <Frame Grid.Row="1" Margin="10,0" Padding="0"  HasShadow="False">
+                    <Grid  ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto,auto,auto,auto,auto" ColumnSpacing="5" RowSpacing="0"  >
+                        <Frame HasShadow="False" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                            <Image Source="one" Aspect="AspectFit" />
+                        </Frame>
+                        <Label Grid.Column="1" Grid.Row="0" Text="Allen Chandler" Margin="0" Padding="0" FontSize="20" />
+                        <Label Grid.Column="1" Grid.Row="1" Text="Toyota Prius" TextColor="Orange" Margin="0" Padding="0" FontSize="Subtitle" />
+                        <Label Grid.Column="1" Grid.Row="2" Margin="0" Padding="0" FontSize="Subtitle" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="&#xf3c5;" FontFamily="fwFreeS"/>
+                                    <Span Text="   8753 Mauricio Walks"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="2" Grid.Row="0" Margin="0,0,10,0" Text="Success" TextColor="Green" HorizontalTextAlignment="End" FontSize="16"/>
+                        <Label Grid.Column="2" Grid.Row="1" Margin="0,0,10,0" Text="Today at 3:26 pm" TextColor="LightGray" FontSize="12"/>
+                        <BoxView  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+                        <Frame HasShadow="False" Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="40" WidthRequest="40" Margin="0" Padding="0" >
+                            <Image Source="cash123" Aspect="AspectFit" />
+                        </Frame>
+                        <Label Grid.Column="1" Grid.Row="4" Text="$ 50.13" Margin="0" Padding="0" FontSize="20" />
+                        <Label Grid.Column="1" Grid.Row="5" Text="Cash"  Margin="0" Padding="0" FontSize="Subtitle" />
+
+
+
+                    </Grid>
+                </Frame>
+            </Grid>
+                <Grid RowDefinitions="auto,auto" RowSpacing="0" Margin="10,10,10,0">
+                    <Frame Grid.Row="0" Margin="10,10,10,0"  HeightRequest="130" HasShadow="False" Padding="0" IsClippedToBounds="True">
+                        <Image  Source="pakistan" Aspect="AspectFill" />
+                    </Frame>
+                    <Frame Grid.Row="1" Margin="10,0" Padding="0"  HasShadow="False">
+                        <Grid  ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto,auto,auto,auto,auto" ColumnSpacing="5" RowSpacing="0"  >
+                            <Frame HasShadow="False" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                                <Image Source="one" Aspect="AspectFit" />
+                            </Frame>
+                            <Label Grid.Column="1" Grid.Row="0" Text="Allen Chandler" Margin="0" Padding="0" FontSize="20" />
+                            <Label Grid.Column="1" Grid.Row="1" Text="Toyota Prius" TextColor="Orange" Margin="0" Padding="0" FontSize="Subtitle" />
+                            <Label Grid.Column="1" Grid.Row="2" Margin="0" Padding="0" FontSize="Subtitle" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="&#xf3c5;" FontFamily="fwFreeS"/>
+                                        <Span Text="   8753 Mauricio Walks"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="0" Margin="0,0,10,0" Text="Success" TextColor="Green" HorizontalTextAlignment="End" FontSize="16"/>
+                            <Label Grid.Column="2" Grid.Row="1" Margin="0,0,10,0" Text="Today at 3:26 pm" TextColor="LightGray" FontSize="12"/>
+                            <BoxView  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+                            <Frame HasShadow="False" Grid.Row="4" Grid.RowSpan="2" Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="40" WidthRequest="40" Margin="0" Padding="0" >
+                                <Image Source="cash123" Aspect="AspectFit" />
+                            </Frame>
+                            <Label Grid.Column="1" Grid.Row="4" Text="$ 50.13" Margin="0" Padding="0" FontSize="20" />
+                            <Label Grid.Column="1" Grid.Row="5" Text="Cash"  Margin="0" Padding="0" FontSize="Subtitle" />
+
+
+
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevTest.Views.EmergencyContactsListPage">
+    <NavigationPage.TitleView>
+        <Grid ColumnDefinitions="auto,*,auto,auto" ColumnSpacing="0" >
+            <Label Grid.Column="0" Text="&#xf060;" TextColor="White" FontFamily="fwFreeS" FontSize="24" Margin="10" VerticalTextAlignment="Center"/>
+            <Label Grid.Column="1" Text="Emergency Contacts" TextColor="White" FontSize="24" VerticalTextAlignment="Center" Margin="10"/>
+            <Label Grid.Column="2" Text="&#xf002;" TextColor="White" FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+            <Label Grid.Column="3" Text="&#xf303;" TextColor="White" FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" Margin="10"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto" ColumnSpacing="5" Margin="20,0" RowSpacing="0"  >
+                <Frame HasShadow="False"   Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                    <Image Source="one" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label Text="Rosetta Page" Margin="0" Padding="0" FontSize="Title" />
+                    <Label Text="+1 98765 43210" Margin="0" Padding="0" FontSize="Subtitle" />
+                </StackLayout>
+                <Label  Grid.Column="2" Text="&#xf0c8;" Margin="20"   FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+                <BoxView  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+            </Grid>
+
+            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto" ColumnSpacing="5" Margin="20,0" RowSpacing="0"  >
+                <Frame HasShadow="False"  Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                    <Image Source="one" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label Text="Lillie Nelson" Margin="0" Padding="0" FontSize="Title" />
+                    <Label Text="+1 98765 43210" Margin="0" Padding="0" FontSize="Subtitle" />
+                </StackLayout>
+                <Label  Grid.Column="2" Text="&#xf14a;" Margin="20"   FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+            </Grid>
+
+            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto" ColumnSpacing="5" Margin="20,0" RowSpacing="0"  >
+                <Frame HasShadow="False"  Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                    <Image Source="one" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label Text="Sue Willis" Margin="0" Padding="0" FontSize="Title" />
+                    <Label Text="+1 98765 43210" Margin="0" Padding="0" FontSize="Subtitle" />
+                </StackLayout>
+                <Label  Grid.Column="2" Text="&#xf0c8;" Margin="20"   FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+            </Grid>
+
+            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto" ColumnSpacing="5" Margin="20,0" RowSpacing="0"  >
+                <Frame HasShadow="False"  Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                    <Image Source="one" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label Text="Sylvia Mckinney" Margin="0" Padding="0" FontSize="Title" />
+                    <Label Text="+1 98765 43210" Margin="0" Padding="0" FontSize="Subtitle" />
+                </StackLayout>
+                <Label  Grid.Column="2" Text="&#xf14a;" Margin="20"   FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+            </Grid>
+
+            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto" ColumnSpacing="5" Margin="20,0" RowSpacing="0"  >
+                <Frame HasShadow="False"  Grid.Column="0" CornerRadius="50" IsClippedToBounds="True" HeightRequest="70" WidthRequest="70" Margin="0" Padding="0" >
+                    <Image Source="one" Aspect="AspectFit" />
+                </Frame>
+                <StackLayout Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label Text="Beulah Tyler" Margin="0" Padding="0" FontSize="Title" />
+                    <Label Text="+1 98765 43210" Margin="0" Padding="0" FontSize="Subtitle" />
+                </StackLayout>
+                <Label  Grid.Column="2" Text="&#xf0c8;" Margin="20"   FontFamily="fwFreeS"  FontSize="24" HorizontalOptions="End" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="1" VerticalOptions="Start"  Color="LightGray"  />
+            </Grid>
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
