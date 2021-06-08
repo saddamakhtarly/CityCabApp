@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using DevTest.Models;
+using Prism.Commands;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace DevTest.ViewModels
     {
 
         #region Private Properties
-        private bool _isClicked;
+        private List<Rating> _rating;
         #endregion
 
         #region Public Properties
@@ -18,14 +19,20 @@ namespace DevTest.ViewModels
         #endregion
 
         #region Command
-        public DelegateCommand ReviewCommand => new DelegateCommand(ReviewTapped);
-
+        public DelegateCommand<object> ReviewCommand => new DelegateCommand<object>(ReviewTapped);
         #endregion
 
         #region Constructors
         public ReviewYourTripPageViewModel(INavigationService service) : base(service)
         {
-            
+            Rating = new List<Rating>
+            {
+                new Rating { Star = "\uf005", },
+                new Rating { Star = "\uf005", },
+                new Rating { Star = "\uf005", },
+                new Rating { Star = "\uf005", },
+                new Rating { Star = "\uf005", },
+            };
         }
 
         //Only run first time after Constructor
@@ -36,10 +43,10 @@ namespace DevTest.ViewModels
         #endregion
 
         #region Get Set
-        public bool IsClicked
+        public List<Rating> Rating
         {
-            get => _isClicked;
-            set => SetProperty(ref _isClicked, value);
+            get => _rating;
+            set => SetProperty(ref _rating, value);
         }
         #endregion
 
@@ -48,14 +55,12 @@ namespace DevTest.ViewModels
         #endregion
 
         #region Private Implementation
-        private void ReviewTapped()
+        private void ReviewTapped(object obj)
         {
-            if (IsClicked)
+            if (obj != null && obj is Rating rating)
             {
-                IsClicked = false;
+                rating.IsRated = rating.IsRated ? false : true;
             }
-            else
-                IsClicked = true;
         }
         #endregion
 

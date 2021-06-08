@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Review your trip"
              NavigationPage.HasBackButton="True"
-             x:Class="DevTest.Views.ReviewYourTripPage">
+             x:Class="DevTest.Views.ReviewYourTripPage"
+             x:Name="reviewYourTripPage">
     <ContentPage.Content>
         <ScrollView>
             <Grid RowDefinitions="auto,*"
@@ -55,6 +56,26 @@
                         </Frame>
                         <Frame Grid.Row="1" Margin="5,15,5,0" BackgroundColor="{StaticResource WhiteColor}" Padding="10">
                             <Grid RowDefinitions="auto,auto,auto">
+                                <StackLayout Grid.Row="0" Margin="0,20,0,0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BindableLayout.ItemsSource="{Binding Rating}">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Grid.Column="1" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="{Binding Star}" FontSize="38">
+                                                <Label.Triggers>
+                                                    <DataTrigger Binding="{Binding IsRated}" TargetType="Label" Value="True">
+                                                        <Setter Property="TextColor" Value="Orange"/>
+                                                    </DataTrigger>
+                                                </Label.Triggers>
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding BindingContext.ReviewCommand, Source={x:Reference reviewYourTripPage}}" CommandParameter="{Binding .}"/>
+                                                </Label.GestureRecognizers>
+                                            </Label>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                                <Label Margin="0,20,0,0" Grid.Row="1" TextColor="LightGray" Text="WRITE YOUR COMMENT" FontSize="18"/>
+                                <Entry Grid.Row="2" Placeholder="Lorem ipsum dolor sit"/>
+                            </Grid>
+                            <!--<Grid RowDefinitions="auto,auto,auto">
                                 <Grid Grid.Row="0" ColumnDefinitions="*,auto,auto,auto,auto,auto,*">
                                     <Label Grid.Column="1" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
                                         <Label.Triggers>
@@ -63,7 +84,7 @@
                                             </DataTrigger>
                                         </Label.Triggers>
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}" CommandParameter="OneStar"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                     <Label Grid.Column="2" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
@@ -73,7 +94,7 @@
                                             </DataTrigger>
                                         </Label.Triggers>
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}" CommandParameter="TwoStar"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                     <Label Grid.Column="3" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
@@ -83,7 +104,7 @@
                                             </DataTrigger>
                                         </Label.Triggers>
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}" CommandParameter="ThreeStar"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                     <Label Grid.Column="4" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
@@ -93,7 +114,7 @@
                                             </DataTrigger>
                                         </Label.Triggers>
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}" CommandParameter="FourStar"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                     <Label Grid.Column="5" FontFamily="fwFreeS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray" Text="&#xf005;" FontSize="38">
@@ -103,13 +124,13 @@
                                             </DataTrigger>
                                         </Label.Triggers>
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding ReviewCommand}"/>
+                                            <TapGestureRecognizer Command="{Binding ReviewCommand}" CommandParameter="FiveStar"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                 </Grid>
                                 <Label Margin="0,40,0,0" Grid.Row="1" TextColor="LightGray" Text="WRITE YOUR COMMENT" FontSize="18"/>
                                 <Entry Grid.Row="2" Placeholder="Lorem ipsum dolor sit"/>
-                            </Grid>
+                            </Grid>-->
                         </Frame>
                         <!--<Button Grid.Row="2" CornerRadius="5" Padding="0" Text="CANCEL REQUEST" TextColor="{StaticResource WhiteColor}" FontSize="24" BackgroundColor="{StaticResource DarkGrayColor}" />-->
                         <Grid  Grid.Row="3" Margin="5">
